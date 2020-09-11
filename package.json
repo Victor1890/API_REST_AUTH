@@ -4,7 +4,9 @@
   "description": "This is an API_REST with authentication and roles",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "build": "babel src --our-dir dist"
   },
   "repository": {
     "type": "git",
@@ -32,5 +34,12 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.4",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "nodemon": "^2.0.4"
   }
 }
