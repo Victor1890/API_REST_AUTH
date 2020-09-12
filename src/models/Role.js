@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
-import router from "../routes/auth.routes";
+
+export const ROLES = ["user", "admin", "moredator"];
 
 const rolesSchema = new Schema(
   {

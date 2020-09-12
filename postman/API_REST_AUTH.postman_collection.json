@@ -29,6 +29,27 @@
 					"response": []
 				},
 				{
+					"name": "GET PRODUCT ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/products/5f5d011fd2110940c043fb9a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"5f5d011fd2110940c043fb9a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "POST PRODUCTS",
 					"request": {
 						"method": "POST",
@@ -36,6 +57,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNWQyMjAxYWUyMzM3M2NkMDAyNWMyNCIsImlhdCI6MTU5OTkzOTA3MywiZXhwIjoxNjAwMTExODczfQ.F2z3fDHqnYf16Ug5oFejlHwole2ADjHl1nGLbPzVwdM",
 								"type": "text"
 							}
 						],
@@ -57,18 +83,201 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "PUT PRODUCTS ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"laptop sasas\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products/5f5bb7ba3736081250deae17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"5f5bb7ba3736081250deae17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PRODUCTS ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNWQyMjAxYWUyMzM3M2NkMDAyNWMyNCIsImlhdCI6MTU5OTkzOTA3MywiZXhwIjoxNjAwMTExODczfQ.F2z3fDHqnYf16Ug5oFejlHwole2ADjHl1nGLbPzVwdM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"laptop\",\r\n    \"category\": \"Tecnology\",\r\n    \"price\": 150.99,\r\n    \"imgURL\": \"https://monsterlaptops.com.do/wp-content/uploads/1delle72404433.jpg\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products/5f5d0a70cb976536940e2116",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"5f5d0a70cb976536940e2116"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Users",
-			"item": [],
+			"item": [
+				{
+					"name": "/api/users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNWQyMjAxYWUyMzM3M2NkMDAyNWMyNCIsImlhdCI6MTU5OTkzOTA3MywiZXhwIjoxNjAwMTExODczfQ.F2z3fDHqnYf16Ug5oFejlHwole2ADjHl1nGLbPzVwdM",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Victor\",\r\n    \"password\":\"123\",\r\n    \"roles\":[\"admin\", \"adad\"]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Auth",
-			"item": [],
+			"item": [
+				{
+					"name": "/api/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"asdasd\",\r\n    \"email\": \"aaa@victor.com\",\r\n    \"password\": \"password\",\r\n    \"roles\":[\"admin\", \"moderator\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aaa@victor.com\",\r\n    \"password\": \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"protocolProfileBehavior": {}
 		}
 	],
