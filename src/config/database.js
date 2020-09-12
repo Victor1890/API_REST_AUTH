@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 mongoose
-  .connect("mongodb://localhost/api_rest-auth", {
+  .connect("mongodb://127.0.0.1:27017/api_rest_auth", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: true,

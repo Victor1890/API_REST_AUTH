@@ -1,5 +1,5 @@
-import app from "./app";
 import "./config/database";
+import app from "./app";
 
 const init = async () => {
   await app.listen(3000);
